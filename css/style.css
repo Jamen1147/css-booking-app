@@ -33,6 +33,10 @@ body {
   background-size: cover;
   background-repeat: no-repeat; }
 
+::selection {
+  background-color: var(--color-primary);
+  color: #fff; }
+
 .container {
   max-width: 120rem;
   min-height: 50rem;
@@ -61,7 +65,24 @@ body {
 
 .hotel-view {
   background-color: #fff;
-  height: 80rem;
+  flex: 1; }
+
+.detail {
+  display: flex;
+  padding: 4.5rem;
+  background-color: var(--color-grey-light-1);
+  border-bottom: 1px solid var(--color-grey-light-2); }
+
+.description {
+  font-size: 1.4rem;
+  background-color: #fff;
+  box-shadow: 0 2rem 5rem rgba(0, 0, 0, 0.1);
+  padding: 3rem;
+  flex: 0 0 60%;
+  margin-right: 4.5rem; }
+
+.user-reviews {
+  background-color: yellowgreen;
   flex: 1; }
 
 /*
@@ -314,3 +335,66 @@ Overview Inline Button
   100% {
     transform: scale(1);
     box-shadow: none; } }
+
+/*
+
+------------------------------------------------------------------------
+Detail Paragraph
+------------------------------------------------------------------------
+
+*/
+.paragraph:not(:last-of-type) {
+  margin-bottom: 2rem; }
+
+/*
+
+------------------------------------------------------------------------
+Detail List
+------------------------------------------------------------------------
+
+*/
+.list {
+  margin: 3rem 0;
+  list-style: none;
+  padding: 3rem 0;
+  border-bottom: 1px solid var(--color-grey-light-2);
+  border-top: 1px solid var(--color-grey-light-2);
+  display: flex;
+  flex-wrap: wrap; }
+  .list__item {
+    flex: 0 0 50%;
+    margin-bottom: 0.7rem; }
+  .list__item::before {
+    content: '';
+    display: inline-block;
+    height: 1rem;
+    width: 1rem;
+    margin-right: 0.7rem;
+    background-color: var(--color-primary);
+    mask-image: url(../img/chevron-thin-right.svg);
+    mask-size: cover;
+    -webkit-mask-image: url(../img/chevron-thin-right.svg);
+    -webkit-mask-size: cover; }
+
+/*
+
+------------------------------------------------------------------------
+Detail Recommend
+------------------------------------------------------------------------
+
+*/
+.recommend {
+  font-size: 1.3rem;
+  color: var(--color-grey-dark-3);
+  display: flex;
+  align-items: center; }
+  .recommend__count {
+    margin-right: auto; }
+  .recommend__photo {
+    box-sizing: content-box;
+    height: 4rem;
+    width: 4rem;
+    border-radius: 50%;
+    border: 3px solid #fff; }
+    .recommend__photo:not(:last-child) {
+      margin-right: -1.5rem; }

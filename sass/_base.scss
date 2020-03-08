@@ -44,3 +44,8 @@ body {
 	background-size: cover;
 	background-repeat: no-repeat;
 }
+
+::selection {
+	background-color: var(--color-primary);
+	color: #fff;
+}
